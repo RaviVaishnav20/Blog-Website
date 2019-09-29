@@ -1,0 +1,15 @@
+<%-include("partials/header"); -%>
+<h1>Home</h1>
+
+<p><%= e_homeStartingContent %></p>
+
+<% e_posts.forEach(function(epost){%>
+  <h1><%= epost.title%></h1>
+
+  <p><%= epost.content.substr(0,100)+"..."%>
+    <a href="/posts/<%=epost.title%>"> Read More</a>
+  </p>
+
+  <% });%>
+
+<%-include("partials/footer"); -%>
